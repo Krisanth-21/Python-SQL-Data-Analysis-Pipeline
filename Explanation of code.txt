@@ -1,0 +1,28 @@
+#importing necessary packages
+    import kaggle
+    import pandas as pd
+
+#used to download zipfile - dataset which are available in kaggle
+    !kaggle datasets download ankitbansal06/retail-orders -f orders.csv
+
+#extract file from zip file
+    import zipfile
+    zip = zipfile.ZipFile('orders.csv.zip')
+    zip.extractall()
+    zip.close()
+
+#read a csv and handle null values present in the dataset
+    df = pd.read_csv('orders.csv', na_values=['Not Available', 'unknown'])
+#checking how much values available inside the ship mode column
+    df['Ship Mode'].unique()
+
+#rename column names - make all into lower case & replace with underscore
+#high time complexity, because takes time to change all columns
+    df.rename(columns = {'Order Id' : 'order_id'})
+
+#instead change into str and use lower()
+        df.columns = df.columns.str.lower()
+
+#replace all spaces with underscore
+    df.columns = df.columns.str.replace(' ', '_')
+    df.head(5)
