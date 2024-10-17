@@ -1,10 +1,10 @@
-# SQL-Python-Project
+# Python-SQL Data Analysis Pipeline
 
-# Description:
+# DESCRIPTION:
     This project demonstrates a comprehensive data analysis pipeline using Python and SQL. 
     It leverages the Kaggle API to fetch a retail orders dataset, performs data cleaning and transformation with Pandas,
     and loads the processed data into SQL Server for in-depth analysis.
-# Key Features:
+# KEY FEATURES:
 # Data Acquisition: 
     Utilizes the Kaggle API to download the required dataset.
 # Data Cleaning and Preparation: 
@@ -16,7 +16,7 @@
     Analyzing regional sales trends.
     Comparing sales performance across different time periods.
     Evaluating profit growth for various product categories.
-# Prerequisites:
+# PREREQUISITES:
     Python version above 4
     Pandas
     SQL Server
